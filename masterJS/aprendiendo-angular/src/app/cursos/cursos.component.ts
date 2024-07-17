@@ -9,8 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CursosComponent implements OnInit{
 
+  constructor(){
+    console.log("Se ha cargado el componente: cursos.componente.ts");
+  }
+
   ngOnInit(): void {
     // Este método se ejecuta cuando cargo el componente
-    console.log("OnInit ejecutado");
+    console.log("OnInit ejecutado!!");
   }
 }
