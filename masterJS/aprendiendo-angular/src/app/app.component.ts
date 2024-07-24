@@ -4,12 +4,12 @@ import { RouterOutlet } from '@angular/router';
 
 // Imports generados
 import { Configuracion } from './models/configuration';
-
+import { ZapatillasComponent } from './zapatillas/zapatillas.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet],
+  imports: [CommonModule, RouterOutlet, ZapatillasComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
