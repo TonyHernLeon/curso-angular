@@ -13,8 +13,10 @@ export class ZapatillasComponent {
 
   public titulo: String = "Componente de zapatillas";
   public zapatillas: Array<Zapatilla>;
+  public marcas: String[];
 
   constructor(){
+    this.marcas = new Array();
     this.zapatillas = [
       new Zapatilla('Reebook Classic', 'Reebook', 'Blanco', 80, true),
       new Zapatilla('Nike Runner MD', 'Nike', 'Negro', 60, true),
@@ -24,5 +26,13 @@ export class ZapatillasComponent {
 
   ngOnInit(){
     console.log(this.zapatillas);
+
+    this.getMarcas();
+  }
+
+  getMarcas(){
+    this.zapatillas.forEach((zapatilla, index) =>{
+      this.marcas.push(zapatilla.marca);
+    });
   }
 }
